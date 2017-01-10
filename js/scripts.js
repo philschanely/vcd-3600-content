@@ -63,9 +63,9 @@ function pagify(_context, _marker) {
 
         // Set up event listeners
         $(_context).on("click", function(e){
-            e.preventDefault();
             var $target = $(e.target);
             if ($target.hasClass("subnav-link") || $target.hasClass("page-nav-link")) {
+                e.preventDefault();
                 var targetPageNum = Number($target.attr("href").replace("#page-", ""));
 
                 // Remove all active classes
