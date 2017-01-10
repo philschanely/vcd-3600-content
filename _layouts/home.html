@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<main class="row page-home">
+    <div class="col-sm-6">
+        <h2 class="page-heading">Projects</h2>
+        <ul class="list-unstyled list-group">
+            {% for project in site.projects %}
+            <li class="list-group-item"><a class="post-link" href="{{ project.url | relative_url }}">{{ project.title | escape }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="col-sm-6">
+        <h2 class="page-heading">Lessons</h2>
+        <ul class="list-unstyled list-group">
+            {% for lesson in site.lessons %}
+            <li class="list-group-item"><a class="post-link" href="{{ lesson.url | relative_url }}">{{ lesson.title | escape }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    {{ content }}
+</main>
